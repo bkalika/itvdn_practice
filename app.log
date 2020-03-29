@@ -903,3 +903,775 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua'
 2020-03-29 17:23:01,168 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
 2020-03-29 17:23:01,183 [DEBUG] - PrivatApi:rate after: Rate 840=>900: 30.0
 2020-03-29 17:23:01,184 [INFO] - PrivatApi:Finished update for: 840=>900
+2020-03-29 20:08:46,694 [INFO] - PrivatApi:Started update for: 840=>900
+2020-03-29 20:08:46,698 [DEBUG] - PrivatApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:08:46,733 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x00000208736C1A88>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x00000208736C1A88>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 56, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x00000208736C1A88>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 20:08:47,027 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 20:08:47,028 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 20:08:47,204 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 20:08:47,204 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 20:08:47,225 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 20:08:47,226 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 20:08:47,519 [INFO] - TestApi:Started update for: 840=>900
+2020-03-29 20:08:47,520 [DEBUG] - TestApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:08:47,531 [DEBUG] - TestApi:rate after: Rate 840=>900: 1.01
+2020-03-29 20:08:47,531 [INFO] - TestApi:Finished update for: 840=>900
+2020-03-29 20:08:47,784 [INFO] - PrivatApi:Started update for: 840=>900
+2020-03-29 20:08:47,786 [DEBUG] - PrivatApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:08:48,294 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5791.0021', 'sale': '6400.5813'}]
+2020-03-29 20:08:48,310 [DEBUG] - PrivatApi:rate after: Rate 840=>900: 28.49003
+2020-03-29 20:08:48,310 [INFO] - PrivatApi:Finished update for: 840=>900
+2020-03-29 20:08:48,559 [INFO] - PrivatApi:Started update for: 840=>900
+2020-03-29 20:08:48,560 [DEBUG] - PrivatApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:08:48,586 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 20:08:48,602 [DEBUG] - PrivatApi:rate after: Rate 840=>900: 30.0
+2020-03-29 20:08:48,602 [INFO] - PrivatApi:Finished update for: 840=>900
+2020-03-29 20:09:02,869 [INFO] - PrivatApi:Started update for: 840=>900
+2020-03-29 20:09:02,871 [DEBUG] - PrivatApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:09:02,889 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015AB7DD0C08>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015AB7DD0C08>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 56, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015AB7DD0C08>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 20:09:03,175 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 20:09:03,175 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 20:09:03,322 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 20:09:03,323 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 20:09:03,336 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 20:09:03,336 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 20:09:03,652 [INFO] - TestApi:Started update for: 840=>900
+2020-03-29 20:09:03,654 [DEBUG] - TestApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:09:03,664 [DEBUG] - TestApi:rate after: Rate 840=>900: 1.01
+2020-03-29 20:09:03,665 [INFO] - TestApi:Finished update for: 840=>900
+2020-03-29 20:09:03,955 [INFO] - PrivatApi:Started update for: 840=>900
+2020-03-29 20:09:03,956 [DEBUG] - PrivatApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:09:04,375 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5791.0021', 'sale': '6400.5813'}]
+2020-03-29 20:09:04,393 [DEBUG] - PrivatApi:rate after: Rate 840=>900: 28.49003
+2020-03-29 20:09:04,393 [INFO] - PrivatApi:Finished update for: 840=>900
+2020-03-29 20:09:04,721 [INFO] - PrivatApi:Started update for: 840=>900
+2020-03-29 20:09:04,721 [DEBUG] - PrivatApi:rate before: Rate 840=>900: 1.0
+2020-03-29 20:09:04,745 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 20:09:04,768 [DEBUG] - PrivatApi:rate after: Rate 840=>900: 30.0
+2020-03-29 20:09:04,768 [INFO] - PrivatApi:Finished update for: 840=>900
+2020-03-29 20:17:09,606 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 20:17:09,607 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 20:17:10,068 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5783.3024', 'sale': '6392.0710'}]
+2020-03-29 20:17:10,084 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6392.071
+2020-03-29 20:17:10,084 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 20:19:24,201 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 20:19:24,202 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 20:19:24,222 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B596641888>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B596641888>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 56, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B596641888>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 20:19:24,543 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 20:19:24,545 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 20:19:24,822 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 20:19:24,822 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 20:19:24,833 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 20:19:24,833 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 20:19:25,112 [INFO] - TestApi:Started update for: 840=>980
+2020-03-29 20:19:25,113 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-29 20:19:25,124 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-29 20:19:25,124 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-29 20:19:25,447 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 20:19:25,447 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 20:19:25,891 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5788.6873', 'sale': '6398.0228'}]
+2020-03-29 20:19:25,909 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6398.0228
+2020-03-29 20:19:25,909 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 20:19:26,309 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 20:19:26,311 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 20:19:26,336 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 20:19:26,352 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 30.0
+2020-03-29 20:19:26,353 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 20:19:26,608 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 20:19:26,611 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 20:19:27,069 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5788.6873', 'sale': '6398.0228'}]
+2020-03-29 20:19:27,086 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 20:19:27,087 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 20:32:09,864 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:32:09,866 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:35:33,108 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:36:11,362 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:36:20,115 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:37:27,899 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:38:04,606 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:38:04,607 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:42:31,682 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:42:31,683 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:44:15,170 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:44:15,170 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:47:47,775 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:49:02,168 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:49:50,919 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:49:56,977 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:53:56,093 [INFO] - PrivatApi:Started update for: 978=>900
+2020-03-29 20:53:56,094 [DEBUG] - PrivatApi:rate before: Rate 978=>900: 1.0
+2020-03-29 20:53:56,543 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5809.0774', 'sale': '6420.5592'}]
+2020-03-29 20:54:06,311 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:54:06,313 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:54:15,834 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:54:15,836 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:54:22,190 [INFO] - PrivatApi:Started update for: 978=>900
+2020-03-29 20:54:22,192 [DEBUG] - PrivatApi:rate before: Rate 978=>900: 1.0
+2020-03-29 20:54:22,649 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5809.0774', 'sale': '6420.5592'}]
+2020-03-29 20:54:57,833 [INFO] - PrivatApi:Started update for: 978=>900
+2020-03-29 20:54:57,834 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 20:55:11,239 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 20:55:11,241 [DEBUG] - PrivatApi:rate before: Rate 978=>980: 1.0
+2020-03-29 20:55:11,692 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5809.0774', 'sale': '6420.5592'}]
+2020-03-29 21:20:17,925 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 21:20:17,926 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 21:20:17,947 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x00000233200B6448>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x00000233200B6448>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 55, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x00000233200B6448>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 21:20:18,230 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 21:20:18,231 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 21:20:18,379 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 21:20:18,379 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 21:20:18,395 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 21:20:18,395 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 21:20:18,972 [INFO] - TestApi:Started update for: 840=>980
+2020-03-29 21:20:18,973 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-29 21:20:18,989 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-29 21:20:18,989 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-29 21:20:19,275 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 21:20:19,275 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 21:20:19,696 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5796.9411', 'sale': '6407.1455'}]
+2020-03-29 21:20:19,732 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6407.1455
+2020-03-29 21:20:19,732 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 21:20:19,981 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 21:20:19,982 [DEBUG] - PrivatApi:rate before: Rate 978=>980: 1.0
+2020-03-29 21:20:20,394 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5796.9411', 'sale': '6407.1455'}]
+2020-03-29 21:20:20,617 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 21:20:20,618 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 21:20:20,631 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 21:20:20,648 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 30.0
+2020-03-29 21:20:20,648 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 21:20:20,944 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 21:20:20,945 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 21:20:21,376 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5796.9411', 'sale': '6407.1455'}]
+2020-03-29 21:20:21,386 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 21:20:21,386 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 21:21:28,692 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:21:28,693 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 21:23:53,300 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:24:05,930 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 21:25:11,587 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:25:11,588 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 21:26:12,822 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:26:12,824 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 21:27:02,832 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:27:02,834 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 21:28:18,061 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:28:18,063 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 21:29:40,256 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 21:29:40,257 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:39:01,884 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:39:01,885 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:40:04,475 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 22:40:04,476 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 22:40:04,507 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EE1394C8C8>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EE1394C8C8>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 55, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EE1394C8C8>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 22:40:04,827 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 22:40:04,828 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 22:40:05,073 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 22:40:05,073 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 22:40:05,097 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 22:40:05,098 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 22:40:05,380 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:40:05,381 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:40:06,005 [INFO] - TestApi:Started update for: 840=>980
+2020-03-29 22:40:06,006 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-29 22:40:06,017 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-29 22:40:06,017 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-29 22:40:06,580 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 22:40:06,581 [DEBUG] - PrivatApi:rate before: Rate 978=>980: 1.0
+2020-03-29 22:40:07,012 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5646.3234', 'sale': '6240.6732'}]
+2020-03-29 22:40:07,259 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 22:40:07,261 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 22:40:07,279 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 22:40:07,302 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 30.0
+2020-03-29 22:40:07,302 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 22:40:07,548 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 22:40:07,549 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 22:40:07,960 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5646.3234', 'sale': '6240.6732'}]
+2020-03-29 22:40:07,984 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 22:40:07,984 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 22:40:12,206 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:40:12,208 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:44:37,367 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:44:37,368 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:45:17,893 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:45:30,355 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:46:02,630 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:46:04,010 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:46:12,622 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:46:14,115 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:46:30,558 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:46:30,563 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:48:26,498 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:48:26,499 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:49:10,085 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:49:10,086 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:49:12,550 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:49:12,551 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:50:54,878 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:51:00,749 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:54:00,315 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:54:00,316 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:54:14,933 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:54:16,643 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:54:43,653 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:54:43,654 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:54:52,284 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:54:53,303 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 22:56:21,692 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 22:56:23,022 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:04:53,291 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:04:57,937 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:06:58,810 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:06:58,811 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:06:59,264 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5627.3963', 'sale': '6219.7538'}]
+2020-03-29 23:06:59,286 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 23:06:59,286 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:07:04,746 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 23:07:04,747 [DEBUG] - PrivatApi:rate before: Rate 978=>980: 1.0
+2020-03-29 23:07:05,174 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5627.3963', 'sale': '6219.7538'}]
+2020-03-29 23:08:31,346 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:08:31,347 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 23:09:14,198 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:09:14,199 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 23:09:31,185 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:09:31,186 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 23:09:54,306 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:09:54,307 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 23:10:02,765 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:10:02,766 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:10:03,225 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5633.9671', 'sale': '6227.0163'}]
+2020-03-29 23:10:03,244 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 23:10:03,244 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:10:28,696 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:10:28,697 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 23:11:37,109 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:11:51,522 [DEBUG] - PrivatApi:rate before: None
+2020-03-29 23:12:07,519 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:12:31,410 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:12:33,389 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:12:33,391 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 23:12:33,865 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5626.3956', 'sale': '6218.6478'}]
+2020-03-29 23:12:33,883 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6218.6478
+2020-03-29 23:12:33,884 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 23:12:40,109 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:12:40,110 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 23:12:40,561 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5626.3956', 'sale': '6218.6478'}]
+2020-03-29 23:12:40,576 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6218.6478
+2020-03-29 23:12:40,577 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 23:12:45,788 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 23:12:45,789 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 23:12:45,966 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 23:12:45,967 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 23:12:45,984 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 23:12:45,984 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 23:12:51,256 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:12:51,257 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:12:51,286 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 23:12:51,297 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 30.0
+2020-03-29 23:12:51,297 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:12:56,711 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:12:56,712 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:12:56,730 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x000001AC8DF6E488>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001AC8DF6E488>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 55, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001AC8DF6E488>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 23:13:02,498 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:13:02,499 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:15:41,288 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:15:41,290 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:19:45,701 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:19:47,661 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:25:43,826 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:25:43,829 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:25:58,495 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:25:59,884 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:27:05,366 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:27:05,367 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:27:18,226 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:27:18,861 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:28:13,800 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:28:13,801 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:29:02,322 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:29:02,323 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:30:05,436 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:30:05,437 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:34:40,117 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:34:40,118 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:34:58,630 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:34:58,631 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:34:58,649 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x000001830AA0F988>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001830AA0F988>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 55, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x000001830AA0F988>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 23:34:59,090 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 23:34:59,091 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 23:34:59,327 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 23:34:59,327 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 23:34:59,345 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 23:34:59,345 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 23:34:59,656 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:34:59,658 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:35:00,187 [INFO] - TestApi:Started update for: 840=>980
+2020-03-29 23:35:00,189 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:00,213 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-29 23:35:00,213 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-29 23:35:00,471 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:35:00,472 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 23:35:00,876 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5598.6191', 'sale': '6187.9475'}]
+2020-03-29 23:35:00,895 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6187.9475
+2020-03-29 23:35:00,895 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 23:35:01,163 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 23:35:01,164 [DEBUG] - PrivatApi:rate before: Rate 978=>980: 1.0
+2020-03-29 23:35:01,575 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5598.6191', 'sale': '6187.9475'}]
+2020-03-29 23:35:01,898 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:35:01,899 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:01,910 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 23:35:01,920 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 30.0
+2020-03-29 23:35:01,921 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:35:02,208 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:35:02,210 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:02,652 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5598.6191', 'sale': '6187.9475'}]
+2020-03-29 23:35:02,662 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 23:35:02,662 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:35:16,690 [INFO] - TestApi:Started update for: 840=>980
+2020-03-29 23:35:16,691 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:16,708 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-29 23:35:16,708 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-29 23:35:21,281 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:35:21,282 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:21,729 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5598.6191', 'sale': '6187.9475'}]
+2020-03-29 23:35:21,747 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.49003
+2020-03-29 23:35:21,747 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:35:25,878 [INFO] - PrivatApi:Started update for: 978=>980
+2020-03-29 23:35:25,878 [DEBUG] - PrivatApi:rate before: Rate 978=>980: 1.0
+2020-03-29 23:35:26,331 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5598.6191', 'sale': '6187.9475'}]
+2020-03-29 23:35:28,826 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-29 23:35:28,827 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-29 23:35:29,248 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.85000', 'sale': '28.49003'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.50000', 'sale': '31.74603'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36500'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '5598.6191', 'sale': '6187.9475'}]
+2020-03-29 23:35:29,271 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6187.9475
+2020-03-29 23:35:29,272 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-29 23:35:33,820 [INFO] - CbrApi:Started update for: 840=>643
+2020-03-29 23:35:33,821 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-29 23:35:33,982 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-29 23:35:33,982 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-29 23:35:34,004 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-29 23:35:34,005 [INFO] - CbrApi:Finished update for: 840=>643
+2020-03-29 23:35:38,308 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:35:38,309 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:38,320 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'sale': '30.0'}]
+2020-03-29 23:35:38,331 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 30.0
+2020-03-29 23:35:38,331 [INFO] - PrivatApi:Finished update for: 840=>980
+2020-03-29 23:35:42,996 [INFO] - PrivatApi:Started update for: 840=>980
+2020-03-29 23:35:42,998 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-29 23:35:43,015 [ERROR] - PrivatApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 300, in connect
+    conn = self._new_conn()
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connection.py", line 164, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.VerifiedHTTPSConnection object at 0x0000014C742E1FC8>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x0000014C742E1FC8>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 55, in _send
+    return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\my_work\itvdn_practice\venv\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua', port=443): Max retries exceeded with url: /p24api/pubinfo?exchange&json&coursid=11 (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x0000014C742E1FC8>, 'Connection to api.privatbank.ua timed out. (connect timeout=0.001)'))
+2020-03-29 23:35:48,242 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:35:48,243 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:50:07,676 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:50:07,678 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:50:42,668 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:50:43,871 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:54:47,742 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:54:47,743 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-29 23:54:52,659 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-29 23:55:01,097 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
