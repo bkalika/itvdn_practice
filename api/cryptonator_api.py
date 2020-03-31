@@ -1,3 +1,5 @@
+import requests
+
 from api import _Api
 
 CRYPRONATOR_API_URL = 'https://api.cryptonator.com/api/ticker/'
@@ -24,6 +26,7 @@ class Api(_Api):
         url = f'https://api.cryptonator.com/api/ticker/btc-usd'
         response = self._send_request(url=url, method="GET")
         response_json = response.json()
+        print(response_json)
         self.log.debug(f"Cryptonator response: {response_json}")
         rate = self._find_rate(response_json)
         return rate

@@ -1675,3 +1675,277 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.privatbank.ua'
 2020-03-29 23:54:47,743 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
 2020-03-29 23:54:52,659 [INFO] - CryptonatorApi:Started update for: 1000=>980
 2020-03-29 23:55:01,097 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 14:58:00,266 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 14:58:00,268 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:00:59,966 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:00:59,968 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:02:08,049 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:02:08,050 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:02:29,262 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:02:29,264 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:03:40,668 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:03:40,669 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:03:41,605 [DEBUG] - CryptonatorApi:Cryptonator response: <Response [520]>
+2020-03-31 15:04:05,565 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:04:10,750 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:05:40,444 [DEBUG] - CryptonatorApi:Cryptonator response: <Response [520]>
+2020-03-31 15:07:04,197 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:07:04,198 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:07:05,374 [DEBUG] - CryptonatorApi:Cryptonator response: <Response [520]>
+2020-03-31 15:07:13,591 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:07:16,287 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:07:48,504 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:07:48,505 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:11:19,764 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 15:11:19,765 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 15:11:43,509 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:10:28,851 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:10:33,300 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:12:04,524 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:12:06,246 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:40:56,993 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-31 16:40:56,994 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-31 16:40:57,508 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6118.9056', 'sale': '6763.0010'}]
+2020-03-31 16:40:57,519 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6763.001
+2020-03-31 16:40:57,519 [INFO] - PrivatApi:Finished update for: 1000=>840
+2020-03-31 16:41:06,011 [INFO] - PrivatApi:Started update for: 1000=>840
+2020-03-31 16:41:15,888 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-31 16:45:29,217 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:45:29,219 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:45:38,041 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:45:43,151 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:50:27,913 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:50:27,914 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:50:56,519 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:51:00,183 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:51:15,276 [ERROR] - CryptonatorApi:Error during request sending
+Traceback (most recent call last):
+  File "D:\my_work\itvdn_practice\api\__init__.py", line 41, in _send_request
+    response = self._send(method=method, url=url, headers=headers, data=data)
+TypeError: _send() got an unexpected keyword argument 'method'
+2020-03-31 16:52:42,617 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:52:48,621 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:55:04,428 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:55:04,430 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:55:12,766 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:55:15,454 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 16:57:44,673 [INFO] - CryptonatorApi:Started update for: 1000=>980
+2020-03-31 16:57:44,674 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 21:17:15,285 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:17:15,286 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:17:15,849 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6147.1128', 'sale': '6794.1773'}]
+2020-03-31 21:17:15,866 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:17:15,866 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:19:14,144 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:19:14,145 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:19:14,631 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6138.4361', 'sale': '6784.5873'}]
+2020-03-31 21:19:14,642 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:19:14,642 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:20:02,177 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:20:02,177 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:20:02,655 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6138.4361', 'sale': '6784.5873'}]
+2020-03-31 21:20:02,687 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:20:02,687 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:26:46,678 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:26:46,678 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:26:47,173 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6151.1629', 'sale': '6798.6537'}]
+2020-03-31 21:26:47,183 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:26:47,183 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:27:17,498 [INFO] - TestApi:Started update for: 840=>980
+2020-03-31 21:27:17,500 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:27:17,533 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-31 21:27:17,533 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-31 21:27:23,407 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:27:23,407 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:27:23,841 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6150.7513', 'sale': '6798.1988'}]
+2020-03-31 21:27:23,861 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:27:23,862 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:27:29,156 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:27:29,157 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:27:29,641 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6150.7513', 'sale': '6798.1988'}]
+2020-03-31 21:27:29,651 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:27:29,651 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:28:00,826 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:28:00,827 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:28:01,285 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6150.7513', 'sale': '6798.1988'}]
+2020-03-31 21:28:01,307 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:28:01,308 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:29:51,825 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:29:51,825 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:29:52,274 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6150.7513', 'sale': '6798.1988'}]
+2020-03-31 21:29:52,289 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:29:52,290 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:31:10,967 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:31:10,968 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:31:11,460 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6678', 'sale': '6801.4223'}]
+2020-03-31 21:31:11,475 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:31:11,475 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:32:07,746 [INFO] - PrivatApi:Started update for: Rate 1000=>840: 1.0
+2020-03-31 21:32:07,747 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-31 21:32:08,244 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6678', 'sale': '6801.4223'}]
+2020-03-31 21:32:08,253 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6801.4223
+2020-03-31 21:32:08,254 [INFO] - PrivatApi:Finished update for Rate 1000=>840: 6801.4223
+2020-03-31 21:32:18,848 [INFO] - CbrApi:Started update for: Rate 840=>643: 1.0
+2020-03-31 21:32:18,848 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-31 21:32:19,425 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-31 21:32:19,426 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-31 21:32:19,437 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-31 21:32:19,437 [INFO] - CbrApi:Finished update for Rate 840=>643: 77.7325
+2020-03-31 21:32:29,847 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:32:29,847 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:32:30,313 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6678', 'sale': '6801.4223'}]
+2020-03-31 21:32:30,330 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:32:30,330 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:32:59,419 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:32:59,419 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:32:59,886 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6678', 'sale': '6801.4223'}]
+2020-03-31 21:32:59,907 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:32:59,907 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:33:52,814 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:33:52,814 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:33:53,286 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6155', 'sale': '6801.3645'}]
+2020-03-31 21:33:53,296 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:33:53,296 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:34:32,327 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:34:32,327 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:34:32,826 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6155', 'sale': '6801.3645'}]
+2020-03-31 21:34:32,843 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:34:32,843 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:35:03,935 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:35:03,935 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:35:04,397 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6155', 'sale': '6801.3645'}]
+2020-03-31 21:35:04,419 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:35:04,419 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:35:43,678 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:35:43,678 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:35:44,117 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6153.6155', 'sale': '6801.3645'}]
+2020-03-31 21:35:44,134 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:35:44,134 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:36:12,332 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:36:12,332 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:36:12,837 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6154.5845', 'sale': '6802.4355'}]
+2020-03-31 21:36:12,854 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:36:12,854 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:36:25,787 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:36:25,788 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:36:26,252 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6154.5845', 'sale': '6802.4355'}]
+2020-03-31 21:36:26,277 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:36:26,278 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:37:16,661 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:37:16,662 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:37:17,120 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6154.5845', 'sale': '6802.4355'}]
+2020-03-31 21:37:17,136 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:37:17,137 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:37:29,665 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:37:29,666 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:37:30,111 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6154.5845', 'sale': '6802.4355'}]
+2020-03-31 21:37:30,145 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:37:30,145 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:38:11,555 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:38:11,555 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:38:12,006 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6154.5845', 'sale': '6802.4355'}]
+2020-03-31 21:38:12,016 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:38:12,017 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:39:10,079 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:39:10,080 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:39:10,603 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:39:10,622 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:39:10,622 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:40:53,416 [INFO] - CryptonatorApi:Started update for: Rate 1000=>980: 1.0
+2020-03-31 21:40:53,417 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 21:41:11,628 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:41:11,628 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:12,120 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:12,132 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:41:12,132 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:41:12,444 [INFO] - CbrApi:Started update for: Rate 840=>643: 1.0
+2020-03-31 21:41:12,444 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-31 21:41:12,617 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-31 21:41:12,617 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-31 21:41:12,651 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-31 21:41:12,651 [INFO] - CbrApi:Finished update for Rate 840=>643: 77.7325
+2020-03-31 21:41:12,940 [INFO] - CryptonatorApi:Started update for: Rate 1000=>980: 1.0
+2020-03-31 21:41:12,941 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 21:41:13,587 [INFO] - TestApi:Started update for: 840=>980
+2020-03-31 21:41:13,589 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:13,604 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-31 21:41:13,604 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-31 21:41:13,801 [INFO] - PrivatApi:Started update for: Rate 1000=>840: 1.0
+2020-03-31 21:41:13,801 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-31 21:41:14,273 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:14,290 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6797.2345
+2020-03-31 21:41:14,291 [INFO] - PrivatApi:Finished update for Rate 1000=>840: 6797.2345
+2020-03-31 21:41:14,496 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:41:14,496 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:14,920 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:14,942 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:41:14,942 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:41:15,213 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:41:15,213 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:15,672 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:15,687 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:41:15,688 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:41:26,678 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:41:26,678 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:27,120 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:27,135 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:41:27,135 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:41:27,335 [INFO] - CbrApi:Started update for: Rate 840=>643: 1.0
+2020-03-31 21:41:27,336 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-31 21:41:27,530 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-31 21:41:27,530 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-31 21:41:27,546 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-31 21:41:27,546 [INFO] - CbrApi:Finished update for Rate 840=>643: 77.7325
+2020-03-31 21:41:27,894 [INFO] - CryptonatorApi:Started update for: Rate 1000=>980: 1.0
+2020-03-31 21:41:27,894 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 21:41:28,648 [INFO] - TestApi:Started update for: 840=>980
+2020-03-31 21:41:28,649 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:28,662 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-31 21:41:28,662 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-31 21:41:28,912 [INFO] - PrivatApi:Started update for: Rate 1000=>840: 1.0
+2020-03-31 21:41:28,912 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-31 21:41:29,362 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:29,386 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6797.2345
+2020-03-31 21:41:29,386 [INFO] - PrivatApi:Finished update for Rate 1000=>840: 6797.2345
+2020-03-31 21:41:29,616 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:41:29,616 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:30,287 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:30,304 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:41:30,305 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:41:30,531 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:41:30,531 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:41:30,964 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6149.8789', 'sale': '6797.2345'}]
+2020-03-31 21:41:30,991 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:41:30,991 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:42:08,700 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:42:08,701 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:42:09,180 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6172.9623', 'sale': '6822.7478'}]
+2020-03-31 21:42:09,202 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:42:09,203 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:42:09,409 [INFO] - CbrApi:Started update for: Rate 840=>643: 1.0
+2020-03-31 21:42:09,409 [DEBUG] - CbrApi:rate before: Rate 840=>643: 1.0
+2020-03-31 21:42:09,610 [DEBUG] - CbrApi:response.encoding: windows-1251
+2020-03-31 21:42:09,610 [DEBUG] - CbrApi:response.text: <?xml version="1.0" encoding="windows-1251"?><ValCurs Date="28.03.2020" name="Foreign Currency Market"><Valute ID="R01010"><NumCode>036</NumCode><CharCode>AUD</CharCode><Nominal>1</Nominal><Name>Австралийский доллар</Name><Value>47,1448</Value></Valute><Valute ID="R01020A"><NumCode>944</NumCode><CharCode>AZN</CharCode><Nominal>1</Nominal><Name>Азербайджанский манат</Name><Value>45,9330</Value></Valute><Valute ID="R01035"><NumCode>826</NumCode><CharCode>GBP</CharCode><Nominal>1</Nominal><Name>Фунт стерлингов Соединенного королевства</Name><Value>94,5771</Value></Valute><Valute ID="R01060"><NumCode>051</NumCode><CharCode>AMD</CharCode><Nominal>100</Nominal><Name>Армянских драмов</Name><Value>15,7194</Value></Valute><Valute ID="R01090B"><NumCode>933</NumCode><CharCode>BYN</CharCode><Nominal>1</Nominal><Name>Белорусский рубль</Name><Value>30,1979</Value></Valute><Valute ID="R01100"><NumCode>975</NumCode><CharCode>BGN</CharCode><Nominal>1</Nominal><Name>Болгарский лев</Name><Value>43,7979</Value></Valute><Valute ID="R01115"><NumCode>986</NumCode><CharCode>BRL</CharCode><Nominal>1</Nominal><Name>Бразильский реал</Name><Value>15,4738</Value></Valute><Valute ID="R01135"><NumCode>348</NumCode><CharCode>HUF</CharCode><Nominal>100</Nominal><Name>Венгерских форинтов</Name><Value>24,2120</Value></Valute><Valute ID="R01200"><NumCode>344</NumCode><CharCode>HKD</CharCode><Nominal>1</Nominal><Name>Гонконгский доллар</Name><Value>10,0279</Value></Valute><Valute ID="R01215"><NumCode>208</NumCode><CharCode>DKK</CharCode><Nominal>1</Nominal><Name>Датская крона</Name><Value>11,4760</Value></Valute><Valute ID="R01235"><NumCode>840</NumCode><CharCode>USD</CharCode><Nominal>1</Nominal><Name>Доллар США</Name><Value>77,7325</Value></Valute><Valute ID="R01239"><NumCode>978</NumCode><CharCode>EUR</CharCode><Nominal>1</Nominal><Name>Евро</Name><Value>85,7389</Value></Valute><Valute ID="R01270"><NumCode>356</NumCode><CharCode>INR</CharCode><Nominal>10</Nominal><Name>Индийских рупий</Name><Value>10,3457</Value></Valute><Valute ID="R01335"><NumCode>398</NumCode><CharCode>KZT</CharCode><Nominal>100</Nominal><Name>Казахстанских тенге</Name><Value>17,4278</Value></Valute><Valute ID="R01350"><NumCode>124</NumCode><CharCode>CAD</CharCode><Nominal>1</Nominal><Name>Канадский доллар</Name><Value>55,2941</Value></Valute><Valute ID="R01370"><NumCode>417</NumCode><CharCode>KGS</CharCode><Nominal>100</Nominal><Name>Киргизских сомов</Name><Value>97,2264</Value></Valute><Valute ID="R01375"><NumCode>156</NumCode><CharCode>CNY</CharCode><Nominal>1</Nominal><Name>Китайский юань</Name><Value>10,9611</Value></Valute><Valute ID="R01500"><NumCode>498</NumCode><CharCode>MDL</CharCode><Nominal>10</Nominal><Name>Молдавских леев</Name><Value>43,0055</Value></Valute><Valute ID="R01535"><NumCode>578</NumCode><CharCode>NOK</CharCode><Nominal>10</Nominal><Name>Норвежских крон</Name><Value>73,7766</Value></Valute><Valute ID="R01565"><NumCode>985</NumCode><CharCode>PLN</CharCode><Nominal>1</Nominal><Name>Польский злотый</Name><Value>18,9301</Value></Valute><Valute ID="R01585F"><NumCode>946</NumCode><CharCode>RON</CharCode><Nominal>1</Nominal><Name>Румынский лей</Name><Value>17,7184</Value></Valute><Valute ID="R01589"><NumCode>960</NumCode><CharCode>XDR</CharCode><Nominal>1</Nominal><Name>СДР (специальные права заимствования)</Name><Value>105,7869</Value></Valute><Valute ID="R01625"><NumCode>702</NumCode><CharCode>SGD</CharCode><Nominal>1</Nominal><Name>Сингапурский доллар</Name><Value>54,2673</Value></Valute><Valute ID="R01670"><NumCode>972</NumCode><CharCode>TJS</CharCode><Nominal>10</Nominal><Name>Таджикских сомони</Name><Value>76,2457</Value></Valute><Valute ID="R01700J"><NumCode>949</NumCode><CharCode>TRY</CharCode><Nominal>1</Nominal><Name>Турецкая лира</Name><Value>12,0661</Value></Valute><Valute ID="R01710A"><NumCode>934</NumCode><CharCode>TMT</CharCode><Nominal>1</Nominal><Name>Новый туркменский манат</Name><Value>22,2411</Value></Valute><Valute ID="R01717"><NumCode>860</NumCode><CharCode>UZS</CharCode><Nominal>10000</Nominal><Name>Узбекских сумов</Name><Value>81,5430</Value></Valute><Valute ID="R01720"><NumCode>980</NumCode><CharCode>UAH</CharCode><Nominal>10</Nominal><Name>Украинских гривен</Name><Value>27,5213</Value></Valute><Valute ID="R01760"><NumCode>203</NumCode><CharCode>CZK</CharCode><Nominal>10</Nominal><Name>Чешских крон</Name><Value>31,5383</Value></Valute><Valute ID="R01770"><NumCode>752</NumCode><CharCode>SEK</CharCode><Nominal>10</Nominal><Name>Шведских крон</Name><Value>78,0000</Value></Valute><Valute ID="R01775"><NumCode>756</NumCode><CharCode>CHF</CharCode><Nominal>1</Nominal><Name>Швейцарский франк</Name><Value>80,7191</Value></Valute><Valute ID="R01810"><NumCode>710</NumCode><CharCode>ZAR</CharCode><Nominal>10</Nominal><Name>Южноафриканских рэндов</Name><Value>44,4059</Value></Valute><Valute ID="R01815"><NumCode>410</NumCode><CharCode>KRW</CharCode><Nominal>1000</Nominal><Name>Вон Республики Корея</Name><Value>63,7831</Value></Valute><Valute ID="R01820"><NumCode>392</NumCode><CharCode>JPY</CharCode><Nominal>100</Nominal><Name>Японских иен</Name><Value>71,4027</Value></Valute></ValCurs>
+2020-03-31 21:42:09,628 [DEBUG] - CbrApi:rate after: Rate 840=>643: 77.7325
+2020-03-31 21:42:09,628 [INFO] - CbrApi:Finished update for Rate 840=>643: 77.7325
+2020-03-31 21:42:09,962 [INFO] - CryptonatorApi:Started update for: Rate 1000=>980: 1.0
+2020-03-31 21:42:09,962 [DEBUG] - CryptonatorApi:rate before: Rate 1000=>980: 1.0
+2020-03-31 21:42:10,987 [INFO] - TestApi:Started update for: 840=>980
+2020-03-31 21:42:10,988 [DEBUG] - TestApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:42:11,010 [DEBUG] - TestApi:rate after: Rate 840=>980: 1.01
+2020-03-31 21:42:11,011 [INFO] - TestApi:Finished update for: 840=>980
+2020-03-31 21:42:11,200 [INFO] - PrivatApi:Started update for: Rate 1000=>840: 1.0
+2020-03-31 21:42:11,200 [DEBUG] - PrivatApi:rate before: Rate 1000=>840: 1.0
+2020-03-31 21:42:11,656 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6172.9623', 'sale': '6822.7478'}]
+2020-03-31 21:42:11,674 [DEBUG] - PrivatApi:rate after: Rate 1000=>840: 6822.7478
+2020-03-31 21:42:11,675 [INFO] - PrivatApi:Finished update for Rate 1000=>840: 6822.7478
+2020-03-31 21:42:11,910 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:42:11,910 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:42:12,361 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6172.9623', 'sale': '6822.7478'}]
+2020-03-31 21:42:12,379 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:42:12,380 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
+2020-03-31 21:42:12,614 [INFO] - PrivatApi:Started update for: Rate 840=>980: 1.0
+2020-03-31 21:42:12,614 [DEBUG] - PrivatApi:rate before: Rate 840=>980: 1.0
+2020-03-31 21:42:13,053 [DEBUG] - PrivatApi:Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.40000', 'sale': '28.01120'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '30.05000', 'sale': '30.86420'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.32000', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6172.9623', 'sale': '6822.7478'}]
+2020-03-31 21:42:13,063 [DEBUG] - PrivatApi:rate after: Rate 840=>980: 28.0112
+2020-03-31 21:42:13,063 [INFO] - PrivatApi:Finished update for Rate 840=>980: 28.0112
