@@ -59,12 +59,14 @@ class ErrorLog(_Model):
 def init_db():
     Rate.drop_table()
     Rate.create_table()
-    Rate.create(from_currency=840, to_currency=900, rate=1)
+    Rate.create(from_currency=840, to_currency=980, rate=1)
     Rate.create(from_currency=840, to_currency=643, rate=1)
-    Rate.create(from_currency=978, to_currency=900, rate=1)
+    Rate.create(from_currency=978, to_currency=980, rate=1)
     Rate.create(from_currency=100, to_currency=840, rate=1)
-    Rate.create(from_currency=100, to_currency=900, rate=1)
+    Rate.create(from_currency=100, to_currency=980, rate=1)
     Rate.create(from_currency=100, to_currency=643, rate=1)
+    Rate.create(from_currency=1000, to_currency=980, rate=1)
+    Rate.create(from_currency=1000, to_currency=840, rate=1)
 
     for m in (ApiLog, ErrorLog):
         m.drop_table()

@@ -20,7 +20,7 @@ class _Api:
     def update_rate(self, from_currency, to_currency):
         self.log.info(f"Started update for: {from_currency}=>{to_currency}")
         xrate = Rate.select().where(Rate.from_currency == from_currency,
-                                    Rate.to_currency == to_currency).first()
+                                     Rate.to_currency == to_currency).first()
 
         self.log.debug(f"rate before: {xrate}")
         xrate.rate = self._update_rate(xrate)
@@ -39,7 +39,6 @@ class _Api:
 
         try:
             response = self._send(method=method, url=url, headers=headers, data=data)
-            print('adf', response)
             log.response_text = response.text
             return response
         except Exception as ex:
