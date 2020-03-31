@@ -10,11 +10,12 @@ import models
 import test_api
 # import cbr_api
 # import privat_api
-from api import privat_api, cbr_api, cryptonator_api
+# from api import privat_api, cbr_api, cryptonator_api
 
 PRIVAT_API_URL = 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11'
 CBR_API_URL = 'http://www.cbr.ru/scripts/XML_daily.asp'
 CRYPRONATOR_API_URL = 'https://api.cryptonator.com/api/ticker/'
+
 
 def get_privat_response(*args, **kwargs):
     print("get_privat_response")
@@ -33,7 +34,6 @@ class Test(unittest.TestCase):
     def setUp(self):
         models.init_db()
 
-    # not used
     def test_main(self):
         rate = models.Rate.get(id=1)
         updated_before = rate.updated
@@ -50,7 +50,7 @@ class Test(unittest.TestCase):
         updated_before = rate.updated
         self.assertEqual(rate.rate, 1.0)
         # privat_api.update_rates(840, 900)  # old api
-        privat_api.Api().update_rate(840, 980)  # new api
+        api.update_rate(840, 980)  # new api
         rate = models.Rate.get(id=1)
         updated_after = rate.updated
 
@@ -65,18 +65,13 @@ class Test(unittest.TestCase):
 
         self.assertIn('[{"ccy":"USD","base_ccy":"UAH",', api_log.response_text)
 
-    def test_privat_error(self):
-        rate = models.Rate.get(id=1)
-        self.assertEqual(rate.rate, 1.0)
-        self.assertRaises(ValueError, privat_api.Api().update_rate, 978, 980)
-
     def test_privat_btc(self):
         # rate = models.Rate.get(from_currency=1000, to_currency=980)
         rate = models.Rate.get(id=1)
         updated_before = rate.updated
         self.assertEqual(rate.rate, 1.0)
         # privat_api.update_rates(840, 900)  # old api
-        privat_api.Api().update_rate(1000, 840)  # new api
+        api.update_rate(1000, 840)  # new api
         rate = models.Rate.get(from_currency=1000, to_currency=840)
         updated_after = rate.updated
 
@@ -93,7 +88,7 @@ class Test(unittest.TestCase):
         updated_before = rate.updated
         self.assertEqual(rate.rate, 1.0)
         # cbr_api.update_rates(840, 900)  # old api
-        cbr_api.Api().update_rate(840, 643)  # new api
+        api.update_rate(840, 643)  # new api
         rate = models.Rate.get(from_currency=840, to_currency=643)
         updated_after = rate.updated
 
@@ -112,12 +107,12 @@ class Test(unittest.TestCase):
         updated_before = rate.updated
         self.assertEqual(rate.rate, 1.0)
 
-        privat_api.Api().update_rate(840, 980)
+        api.update_rate(840, 980)
 
         rate = models.Rate.get(id=1)
         updated_after = rate.updated
 
-        self.assertEqual(rate.rate, 30)
+        self.assertEqual(rate.rate, 28.0112)
         self.assertGreater(updated_after, updated_before)
 
         api_log = models.ApiLog.select().order_by(models.ApiLog.created.desc()).first()
@@ -125,19 +120,20 @@ class Test(unittest.TestCase):
         self.assertIsNotNone(api_log)
         self.assertEqual(api_log.request_url, PRIVAT_API_URL)
         self.assertIsNotNone(api_log.response_text)
-        self.assertEqual('[{"ccy": "USD", "base_ccy": "UAH", "sale": "30.0"}]', api_log.response_text)
+        self.assertIn('[{"ccy":"USD","base_ccy":"UAH","buy":"27.40000","sale":"28.01120"}', api_log.response_text)
 
     def test_api_error(self):
         api.HTTP_TIMEOUT = 0.001
         rate = models.Rate.get(id=1)
         updated_before = rate.updated
         self.assertEqual(rate.rate, 1.0)
-        self.assertRaises(requests.exceptions.RequestException, privat_api.Api().update_rate, 840, 980)
+        self.assertRaises(requests.exceptions.RequestException, api.update_rate, 840, 980)
 
         rate = models.Rate.get(id=1)
         updated_after = rate.updated
+
         self.assertEqual(rate.rate, 1.0)
-        self.assertEqual(updated_after, updated_before)
+        self.assertEqual(updated_before, updated_after)
 
         api_log = models.ApiLog.select().order_by(models.ApiLog.created.desc()).first()
 
@@ -162,7 +158,7 @@ class Test(unittest.TestCase):
         updated_before = xrate.updated
         self.assertEqual(xrate.rate, 1.0)
 
-        cryptonator_api.Api().update_rate(1000, 980)
+        api.update_rate(1000, 980)
 
         xrate = models.Rate.get(from_currency=from_currency, to_currency=to_currency)
         updated_after = xrate.updated
