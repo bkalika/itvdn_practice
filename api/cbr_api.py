@@ -1,7 +1,5 @@
 import xml.etree.ElementTree as ET
 
-import requests
-
 from api import _Api
 
 CBR_API_URL = 'http://www.cbr.ru/scripts/XML_daily.asp'
@@ -27,10 +25,11 @@ class Api(_Api):
     def _find_rate(self, response_text, from_currency):
         root = ET.fromstring(response_text)
         valutes = root.findall("Valute")
-        aliases_map = {840: "USD"}
+        aliases_map = {840: "USD", 643: "RUB"}
         currency_alias = aliases_map[from_currency]
 
         for valute in valutes:
             if valute.find('CharCode').text == currency_alias:
+                print(valute)
                 return float(valute.find("Value").text.replace(",", "."))
         raise ValueError(f"Invalid Cbr response: {from_currency}")
