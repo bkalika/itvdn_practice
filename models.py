@@ -5,7 +5,6 @@ from peewee import (SqliteDatabase, IntegerField, DoubleField,
 from config import DB_NAME
 
 
-# db = SqliteDatabase("currency.db")
 db = SqliteDatabase(DB_NAME)
 
 
@@ -43,6 +42,10 @@ class ApiLog(_Model):
     created = DateTimeField(index=True, default=peewee_datetime.datetime.now)
     finished = DateTimeField()
     error = TextField(null=True)
+
+    def json(self):
+        data = self.__data__
+        return data
 
 
 class ErrorLog(_Model):
