@@ -1,5 +1,7 @@
 import os
 import urllib.parse
+import config
+
 from peewee import (SqliteDatabase, IntegerField, DoubleField,
                     DateTimeField, datetime as peewee_datetime, Model,
                     CharField, TextField, PostgresqlDatabase)
@@ -11,7 +13,7 @@ if os.environ.get("DATABASE_URL"):
     db = PostgresqlDatabase(host=url.hostname, user=url.username, password=url.password, post=url.port,
                             database=url.path[1:])
 else:
-    db = SqliteDatabase(DB_NAME)
+    db = SqliteDatabase(config.DB_NAME)
 
 
 class _Model(Model):

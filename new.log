@@ -12,3 +12,9 @@
 [2020-04-04 00:19:56,963] [DEBUG] - Currency: log_type api
 [2020-04-04 00:21:35,271] [DEBUG] - Currency: log_type error
 [2020-04-04 00:21:54,656] [DEBUG] - Currency: log_type errorafs
+[2020-04-04 23:53:02,003] [INFO] - PrivatApi: Started update for: Rate 840=>980: 27.62431
+[2020-04-04 23:53:02,003] [DEBUG] - PrivatApi: rate before: Rate 840=>980: 27.62431
+[2020-04-04 23:53:02,567] [DEBUG] - PrivatApi: Privat response: [{'ccy': 'USD', 'base_ccy': 'UAH', 'buy': '27.20000', 'sale': '27.62431'}, {'ccy': 'EUR', 'base_ccy': 'UAH', 'buy': '29.30000', 'sale': '29.85075'}, {'ccy': 'RUR', 'base_ccy': 'UAH', 'buy': '0.31500', 'sale': '0.36001'}, {'ccy': 'BTC', 'base_ccy': 'USD', 'buy': '6523.6911', 'sale': '7210.3955'}]
+[2020-04-04 23:53:02,628] [DEBUG] - PrivatApi: rate after: Rate 840=>980: 27.62431
+[2020-04-04 23:53:02,629] [INFO] - PrivatApi: Finished update for Rate 840=>980: 27.62431
+[2020-04-04 23:53:10,082] [DEBUG] - Currency: log_type api
