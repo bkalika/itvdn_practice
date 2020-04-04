@@ -2,13 +2,15 @@ import traceback
 import importlib
 import requests
 
-from config import logging, LOGGER_CONFIG, HTTP_TIMEOUT
+from config import logging, LOGGING, HTTP_TIMEOUT
 
 from models import Rate, peewee_datetime, ErrorLog, ApiLog
 
-fh = logging.FileHandler(LOGGER_CONFIG["file"])
-fh.setLevel(LOGGER_CONFIG["level"])
-fh.setFormatter(LOGGER_CONFIG["formatter"])
+# fh = logging.FileHandler(LOGGING[1]['handlers']["file"])
+# print(fh)
+# fh.setLevel(LOGGING["level"])
+# fh.setFormatter(LOGGING["formatter"])
+logging.config.dictConfig(LOGGING)
 
 
 def update_rate(from_currency, to_currency):
@@ -20,9 +22,8 @@ def update_rate(from_currency, to_currency):
 
 class _Api:
     def __init__(self, logger_name):
-        self.log = logging.getLogger(logger_name)
-        self.log.addHandler(fh)
-        self.log.setLevel(LOGGER_CONFIG["level"])
+        self.log = logging.getLogger("Api")
+        self.log.name = logger_name
 
     def update_rate(self, rate):
         self.log.info(f"Started update for: {rate}")

@@ -3,7 +3,9 @@ from datetime import datetime
 from flask import render_template, make_response, request, jsonify, redirect, url_for
 import xmltodict
 
-from models import Rate, ApiLog
+# from flask_api import app
+from app import app
+from models import Rate, ApiLog, ErrorLog
 import api
 
 # def get_all_rates():
@@ -94,9 +96,17 @@ class UpdateRates(BaseController):
 
 
 class ViewLogs(BaseController):
-    def _call(self):
+    def _call(self, log_type):
+        app.logger.debug(f"log_type {log_type}")
         page = int(self.request.args.get("page", 1))
-        logs = ApiLog.select().paginate(page, 10).order_by(ApiLog.id.desc())
+        logs_map = {"api": ApiLog, "error": ErrorLog}
+
+        if log_type not in logs_map:
+            raise ValueError(f"Unknown log_type: {log_type}")
+
+        log_model = logs_map[log_type]
+
+        logs = ApiLog.select().paginate(page, 10).order_by(log_model.id.desc())
         return render_template("logs.html", logs=logs)
 
 
